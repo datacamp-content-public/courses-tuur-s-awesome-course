@@ -16,7 +16,7 @@ skills: 2
 This is an example exercise.
 
 `@instructions`
-
+This is the mobile version.
 
 `@hint`
 
