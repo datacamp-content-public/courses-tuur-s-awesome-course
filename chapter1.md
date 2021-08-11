@@ -14,7 +14,7 @@ skills:
   - 2
 ```
 
-This is an example exercise.
+This is an example exercise. etyrtvtw4yvyeryvrtyyhge
 
 `@instructions`
 
@@ -66,12 +66,13 @@ xp: 100
 ```
 
 <!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-khvfxxbjbg
+khvfxxbjbgg ae rgetrtsgserg erg segerg erg seg
 
 `@instructions`
 <!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
 - Instruction 1
 - Instruction 2
+- Instruction 3
 
 `@hint`
 <!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
@@ -90,12 +91,35 @@ khvfxxbjbg
 
 `@solution`
 ```{python}
-
+selected_answer = 1
 ```
 
 `@sct`
 ```{python}
 # Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
+msg = "Have you correctly initialized `my_list`?"
+Ex().check_correct(
+    check_object('my_list').has_equal_value(),
+    multi(
+        # check initialization: [] or list()
+        check_or(
+            has_equal_ast(code = "[]", incorrect_msg = msg),
+            check_function('list')
+        ),
+        check_for_loop().multi(
+            check_iter().has_equal_value(),
+            check_body().check_if_else().multi(
+                check_test().multi(
+                    set_context(2).has_equal_value(),
+                    set_context(3).has_equal_value()
+                ),
+                check_body().set_context(3).\
+                    set_env(my_list = [0]).\
+                    has_equal_value(name = 'my_list')
+            )
+        )
+    )
+)
 ```
 
 ---
