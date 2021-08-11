@@ -119,6 +119,7 @@ HTML, *under* each other
 HTML, *next to* each other
 <img src="https://assets.datacamp.com/production/repositories/5634/datasets/e6986ae6c567536983298eaf3a1f4b3e8d8a2cac/heatmap.png" > <img src="https://assets.datacamp.com/production/repositories/5634/datasets/e6986ae6c567536983298eaf3a1f4b3e8d8a2cac/heatmap.png" >
 
+
 `@hint`
 <!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
 - This is an example hint.
