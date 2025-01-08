@@ -171,3 +171,62 @@ xp: 50
 
 `@projector_key`
 bff202aadb195f0bd1ef25dfd7dcc1e3
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: RemoteDesktopExercise
+key: 238bff6b77
+xp: 100
+version: v5
+data:
+  assignment: >-
+    <!-- Guidelines for the question:
+    https://instructor-support.datacamp.com/en/articles/2375516-course-multiple-choice-exercises.
+    -->
+  fallbackAsset:
+    assetType: Image
+    assetUrl: >-
+      https://assets.datacamp.com/staging/repositories/5977/datasets/f95bb1704da8564eae958d853c5f8e3aceeda550/world_image_binary.jpg
+  hint: >-
+    <!-- Examples of good hints:
+    https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices.
+    -->
+
+    - This is an example hint.
+
+    - This is an example hint.
+  instructionSteps:
+    - hint: Hint 1
+      instructions: Instruction 1
+    - hint: Hint 2
+      instructions: Instruction 2
+  language: python
+  question:
+    flavor: Open
+    openQuestions:
+      - feedback:
+          - message: >-
+              Almost! You You found how many days rooms were occupied on average
+              in Manhattan. However, your result is an average over all room
+              types, and we want the average occupancy for private rooms only.
+              You just need to drag `Room Type` to the right of `Neighborhood`
+              in the `Rows` pane.
+            pattern: '186[.,]9'
+          - message: >-
+              Not really. Are you looking at the right neighborhood? Did you
+              correctly change the measure from `Sum` to `Average`?
+            pattern: .*
+        question: How many days on average were private rooms occupied in Manhattan?
+        solution:
+          answer: '189'
+          message: >-
+            Impressive! Private rooms in Manhattan were occupied 189 days on
+            average in 2019. Excellent job!
+          pattern: '18(9[.,]?0?|8[.,]96)'
+  sct: >-
+    # Examples of good success messages:
+    https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
+```
